@@ -6,6 +6,7 @@ import java.util.Date;
 public class Enrollment
 {
     private int id;
+
     private Date enrollment_date;
     private ArrayList<Student> students;
     private ArrayList<Package> packages;
