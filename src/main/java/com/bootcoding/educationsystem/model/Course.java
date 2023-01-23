@@ -12,4 +12,7 @@ public class Course
     private String create_by;
     private Date modified_date;
     private String modified_by;
+
+
+
 }
