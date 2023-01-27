@@ -4,11 +4,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class ReadRecord
+public class ReadStudentRecord
 {
     public static void main(String[] args)
     {
-        Connection con=DBconnectivity.getConnection();
+        Connection con= DbConnection.getConnection();
         Statement smt=null;
         ResultSet rs=null;
 
