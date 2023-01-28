@@ -8,14 +8,8 @@ import com.bootcoding.educationsystem.utils.PhoneNumberGenerator;
 
 public class StudentService
 {
-    public static void main(String[] args)
-    {
-        StudentService studentService = new StudentService();
-        studentService.createRandomStudents();
-    }
-
-
     private StudentDAO studentDAO;
+
     public StudentService()
     {
         studentDAO=new StudentDAO();
@@ -33,5 +27,12 @@ public class StudentService
 
             studentDAO.insertStudent(student);
         }
+    }
+    public void getStudent()
+    {
+        Student student = new Student();
+        System.out.println("Fetched Record...");
+        studentDAO.ReadStudent(student);
+
     }
 }
