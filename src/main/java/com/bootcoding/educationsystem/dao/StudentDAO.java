@@ -43,10 +43,12 @@ public class StudentDAO
             smt = con.createStatement();
             rs=smt.executeQuery(query);
 
-            while (rs.next()){
+            while (rs.next())
+            {
                 System.out.println("id : "+rs.getInt("id"));
                 System.out.println("name : "+rs.getString("name"));
             }
+            System.out.println("Student record fetched..");
         }
         catch (Exception ex)
         {
