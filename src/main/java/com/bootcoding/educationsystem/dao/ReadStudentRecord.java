@@ -14,7 +14,7 @@ public class ReadStudentRecord
 
         try
         {
-            String query="select * from course";
+            String query="select * from student";
             smt = con.createStatement();
             rs=smt.executeQuery(query);
 
