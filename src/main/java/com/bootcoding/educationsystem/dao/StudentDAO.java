@@ -33,7 +33,8 @@ public class StudentDAO
     }
 
     public void ReadStudent(Student student)
-    {Connection con= DbConnection.getConnection();
+    {
+        Connection con= DbConnection.getConnection();
         Statement smt=null;
         ResultSet rs=null;
 
@@ -47,8 +48,38 @@ public class StudentDAO
             {
                 System.out.println("id : "+rs.getInt("id"));
                 System.out.println("name : "+rs.getString("name"));
+                System.out.println("email : "+rs.getString("email"));
+                System.out.println("phone : "+rs.getLong("phone"));
             }
             System.out.println("Student record fetched..");
+        }
+        catch (Exception ex)
+        {
+            System.out.println(ex);
+        }
+    }
+
+    public void deleteStudent(int id)
+    {
+        Connection con= DbConnection.getConnection();
+        Statement smt=null;
+        ResultSet rs=null;
+
+        try
+        {
+//            String QUERY = "DELETE FROM tableName WHERE id IN (id)";
+            String QUERY = "DELETE * from " + TABLE_NAME + " where id = " + id;
+            smt.executeUpdate(QUERY);
+            rs = smt.executeQuery(QUERY);
+
+            while (rs.next())
+            {
+                System.out.println("id : "+rs.getInt("id"));
+                System.out.println("name : "+rs.getString("name"));
+                System.out.println("email : "+rs.getString("email"));
+                System.out.println("phone : "+rs.getLong("phone"));
+            }
+            System.out.println("Record Deleted successfully..");
         }
         catch (Exception ex)
         {
