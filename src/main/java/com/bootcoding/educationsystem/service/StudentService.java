@@ -17,9 +17,9 @@ public class StudentService
 
     public void createRandomStudents()
     {
+        Student student = new Student();
         for (int i = 1; i <= 50; i++)
         {
-            Student student = new Student();
             student.setId(i);
             student.setName(NameGenerator.getName());
             student.setEmail(EmailIdGenerator.getEmailId(student.getName()));
@@ -28,11 +28,14 @@ public class StudentService
             studentDAO.insertStudent(student);
         }
     }
-    public void getStudent()
+    public void getAllStudent()
     {
         Student student = new Student();
-        System.out.println("Fetched Record...");
         studentDAO.ReadStudent(student);
+    }
 
+    public Student deleteStudentById(int id)
+    {
+        return studentDAO.deleteStudent(id);
     }
 }
