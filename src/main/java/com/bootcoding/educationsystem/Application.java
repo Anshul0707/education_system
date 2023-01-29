@@ -7,7 +7,8 @@ public class Application
     {
         StudentService studentService = new StudentService();
 //        studentService.createRandomStudents();
-//        studentService.getStudent();
+//        studentService.getAllStudent();
+        studentService.deleteStudentById(1);
     }
 
 }
