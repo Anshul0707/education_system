@@ -8,7 +8,8 @@ public class Application
         StudentService studentService = new StudentService();
 //        studentService.createRandomStudents();
 //        studentService.getAllStudent();
-        studentService.deleteStudentById(1);
+        int [] aa={39,40};
+        studentService.deleteStudentById(aa);
     }
 
 }
