@@ -8,7 +8,7 @@ public class Student
     private String name;
     private String email;
     private long phone;
-    private String address;
+    private StudentAddress address;
     private Date create_date;
     private String create_by;
     private Date modified_date;
@@ -47,11 +47,11 @@ public class Student
         this.phone = phone;
     }
 
-    public String getAddress() {
+    public StudentAddress getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(StudentAddress address) {
         this.address = address;
     }
 
